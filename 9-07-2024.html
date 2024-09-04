@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Chat Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .chat-container {
+            width: 400px;
+            margin: 50px auto;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .chat-header {
+            background-color: #f1f1f1;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .chat-body {
+            padding: 20px;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .message {
+            background-color: #e1ffc7;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .message:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent #e1ffc7 transparent transparent;
+        }
+        .input-area {
+            padding: 10px;
+            border-top: 1px solid #ccc;
+            display: flex;
+        }
+        .input-area input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .buttons {
+            text-align: right;
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+        .buttons button {
+            padding: 5px 10px;
+            margin-left: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .buttons button.save {
+            background-color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            Chat Header
+        </div>
+        <div class="chat-body">
+            <div class="contact-info">
+                <div>Dee 2</div>
+                <div>+91 9392135657</div>
+            </div>
+            <div class="message">
+                Hi! Just testing WhatsApp on the web for work!
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="text" placeholder="Type a message">
+        </div>
+        <div class="buttons">
+            <button>New</button>
+            <button class="history">History</button>
+            <button class="save">Save</button>
+        </div>
+    </div>
+</body>
+</html>

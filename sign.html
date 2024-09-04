@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up Page</title>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <button onclick="register()">Register</button>
+
+    <script>
+        function register() {
+            let username;
+            let password;
+            let isValidUsername = false;
+            let isValidPassword = false;
+
+            do {
+                username = prompt("Enter your username:");
+                if (username === null) {
+                    window.location.href = '/';  // Redirect to main page
+                    return;
+                }
+                if (validateUsername(username)) {
+                    isValidUsername = true;
+                } else {
+                    alert("Username must be at least 3 characters long.");
+                }
+            } while (!isValidUsername);
+
+            do {
+                password = prompt("Enter your password:");
+                if (password === null) {
+                    window.location.href = '/';  // Redirect to main page
+                    return;
+                }
+                if (validatePassword(password)) {
+                    isValidPassword = true;
+                } else {
+                    alert("Password must be at least 6 characters long and contain at least one number.");
+                }
+            } while (!isValidPassword);
+
+            alert("Registration successful!");
+        }
+
+        function validateUsername(username) {
+            return username && username.length >= 3;
+        }
+
+        function validatePassword(password) {
+            return password && password.length >= 6 && /\d/.test(password);
+        }
+    </script>
+</body>
+</html>
